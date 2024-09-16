@@ -236,15 +236,18 @@ function ProductList() {
         textDecoration: 'none',
     }
 
-    const handleAddToCart = (product) => {
-        dispatch(addItem(product));
+    const handleAddToCart = (plant) => {
+        console.log('handleAddToCart');
+        console.log(plant);
+        dispatch(addItem(plant));
         setAddedToCart((prevState) => ({
             ...prevState,
-            [product.name]: true, // Set the product name as key and value as true to indicate it's added to cart
+            [plant.name]: true, // Set the plant name as key and value as true to indicate it's added to cart
         }));
     };
 
     const handleCartClick = (e) => {
+        console.log("handleCartClick");
         e.preventDefault();
         setShowCart(true); // Set showCart to true when cart icon is clicked
     };
