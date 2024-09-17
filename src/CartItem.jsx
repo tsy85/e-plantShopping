@@ -52,8 +52,9 @@ const CartItem = ({ onContinueShopping }) => {
             <img className="cart-item-image" src={item.image} alt={item.name} />
             <div className="cart-item-details">
               <div className="cart-item-name">{item.name}</div>
-              <div className="cart-item-cost">{item.cost}</div>
+              <div className="cart-item-cost">Unit price: {item.cost}</div>
               <div className="cart-item-quantity">
+                Qty: 
                 <button
                   className="cart-item-button cart-item-button-dec"
                   onClick={() => handleDecrement(item)}
@@ -71,8 +72,7 @@ const CartItem = ({ onContinueShopping }) => {
                 </button>
               </div>
               <div className="cart-item-total">
-                Total1: {item.cost}
-                Total: {calculateTotalCost(item)}
+                Total: ${calculateTotalCost(item)}
               </div>
               <button
                 className="cart-item-delete"
