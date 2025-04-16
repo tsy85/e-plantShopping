@@ -12,7 +12,7 @@ const CartItem = ({ onContinueShopping }) => {
     let total = 0;
     cart.forEach((el) => {
         const { cost, quantity } = el;
-        total += parseFloat(item.cost.substring(1)) * quantity;
+        total += parseFloat(el.cost.substring(1)) * quantity;
     });
     return total;
   };
@@ -23,6 +23,7 @@ const CartItem = ({ onContinueShopping }) => {
 
   const handleCheckoutShopping = (e) => {
     alert('Functionality to be added for future reference');
+    console.log(cart);
   };
 
   const handleIncrement = (item) => {
